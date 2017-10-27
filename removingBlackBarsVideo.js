@@ -44,32 +44,4 @@ $(document).ready(function() {
 		$('#video iframe').css("display", "block");
 		$('#video iframe').attr('src','https://player.vimeo.com/video/236410155?autoplay=1');
 	});
-
-
-	function resizeHandler() {
-        if ($(window).width() >= 768) {
-			$('.ws-vertical-align').each(function () {
-				$parent = $(this).parent();
-
-				var top = ($parent.height() - $(this).height()) / 2;
-
-				$(this).css('margin-top', top);
-
-				if (top <= 30) {
-					$(this).addClass('ws-mtb-2');
-				} else {
-					$(this).removeClass('ws-mtb-2');
-				}
-
-			});
-        }
-
-    }
-
-    resizeHandler();
-
-    $(window).resize(resizeHandler);
-	
-	
-
 });
